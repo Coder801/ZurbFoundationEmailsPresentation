@@ -6,6 +6,20 @@
 	<meta http-equiv="x-ua-compatible" content="ie=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="node_modules/shower-ribbon/styles/screen-16x10.css">
+	<style>
+		.attr {
+			color: #000080;
+		}
+		.prop {
+			color: #d14;
+		}
+		.dark-text {
+			color: #0a0a0a;
+		}
+		code {
+			color: #008080;
+		}
+	</style>
 </head>
 <body class="shower list">
 
@@ -25,13 +39,201 @@
 	</section>
 
 	<section class="slide">
-		<h2 class="shout shrink" style="font-size: 80px;">Но есть есть одна проблема</h2>
+		<h2 class="shout shrink" style="font-size: 70px;">Но есть есть одна проблема</h2>
 	</section>
 
 	<section class="slide">
-		<h2>Plain text on your slides</h2>
-		<p>Lorem ipsum dolor sit amet, consectetur <a href="#4">adipisicing</a> elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, <em>quis nostrud</em> exercitation ullamco laboris <strong>nisi ut aliquip</strong> ex ea commodo consequat. Duis aute irure <i>dolor</i> in reprehenderit in voluptate velit esse cillum <b>dolore</b> eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in <code>&lt;culpa&gt;</code> qui officia deserunt mollit anim id est laborum.</p>
+		<h2>Правила вёрстки email-писем</h2>
+		<ul>
+			<li>Используйте таблицы при верстке для контроля представления и дизайна.</li> <!-- Grid layout, flexbox, нет сынок, это письма -->
+			<li>Используйте вложенный в HTML-тэги CSS код</li> <!-- Забудьте про препроцессоры -->
+			<li>Изображения только на CDN или других удаленных ресурсах</li>
+			<li>Знание особенностей каждого почтового клиента</li> <!-- Тысячи их -->
+			<li>Мобильные девайсы</li> <!-- Статистика за 2017 год показывает что половина писем читаются с мобильных девайсов-->
+		</ul>
 	</section>
+
+	<section class="slide">
+		<h2>Разработка (В идеальном мире)</h2>
+		<ul>
+			<li>Дизайн</li>
+			<li>Верстка</li>
+			<li>Тестирование</li>
+		</ul>
+	</section>
+
+	<section class="slide">
+		<h2>... и в реальном</h2>
+		<ul>
+			<li>Дизайн</li>
+			<li>Верстка</li>
+			<li>Тестирование</li>
+		</ul>
+	</section>
+
+	<section class="slide">
+		<h2>Тестирование</h2>
+		<img src="" alt="">
+	</section>
+
+	<section class="slide">
+		<h2>Что в итоге?</h2>
+		<ul>
+			<li>Нечитабельный код</li> <!-- Grid layout, flexbox, нет сынок, это письма-->
+			<li>Большое колличество ограничений</li>
+			<li>Отстуствие гибкости</li>
+		</ul>
+	</section>
+
+	<section class="slide">
+		<h2 class="shout shrink" style="font-size: 80px;">Что же делать?</h>
+	</section>
+
+	<section class="slide">
+		<h2 class="shout shrink" style="font-size: 80px;">Решение есть!</h>
+	</section>
+
+	<section class="slide">
+		<h2 class="shout shrink" style="font-size: 80px;">Готовые решения и фреймворки</h2>
+		<ul>
+			<li>
+				Блочный редактор
+				<ul>
+					<li><a href="http://kb.mailchimp.com/templates/layouts-and-themes/create-a-template-with-the-template-builder">Mailchimp</a></li>
+					<li><a href="https://www.campaignmonitor.com/">Campaign Monitor</a></li>
+					<li><a href="https://beefree.io/">Beefree</a></li>
+				</ul>
+			</li>
+			<li>
+				Фреймворки
+				<ul>
+					<li><a href="http://emailframe.work/">Emailframe.work</a></li>
+					<li><a href="https://mjml.io/">mjml.io</a></li>
+					<li><a href="http://foundation.zurb.com/emails/docs/sass-guide.html">Zurb Foundation</a></li>
+				</ul>
+			</li>
+		</ul>
+	</section>
+
+	<section class="slide">
+		<figure>
+			<h2>Zurb Foundation for Emails 2</h2>
+			<img class="cover" src="pictures/zurb-bg.png" alt="Orange typewriter on a wooden table close-up">
+		</figure>
+	</section>
+
+	<section class="slide">
+		<figure>
+			<h2>Преймущества использования Zurb</h2>
+			<ul>
+				<li>Возможность отойти от табличной вертски</li>
+				<li>Использование CSS препроцессоров</li>
+				<li>Гибкость в разработке</li>
+				<li>Встроенные инструменты для тестирования</li>
+				<li>Экономия времени и нервов</li>
+			</ul>
+		</figure>
+	</section>
+
+	<section class="slide">
+		<h2>Установка</h2>
+		<pre>
+			<code><span class="comment">  //Установка глобально Command line interface (CLI)</span></code>
+			<code class="mark dark-text">  npm install --global foundation-cli</code>
+		</pre>
+		<pre>
+			<code><span class="comment">  //Инициализация проекта</span></code>
+			<code class="mark dark-text">  foundation new --framework emails</code>
+		</pre>
+		<pre>
+			<code><span class="comment">  //Переходим в папку с проектом и запускаем</span></code>
+			<code class="mark dark-text">  npm start</code>
+		</pre>
+	</section>
+
+	<section class="slide complect">
+		<figure>
+			<h2>"Комплект" фреймворка</h2>
+			<ul>
+				<li class="next"><a href="http://gulpjs.com/" target="_blank">Gulp:</a> // Система автоматизации разработки</li>
+				<li class="next"><a href="https://foundation.zurb.com/emails/docs/inky.html" target="_blank">Inky HTML:</a> // Конвертирует код в табличный</li>
+				<li class="next"><a href="https://github.com/zurb/panini" target="_blank">Panini:</a> // Генератор файлов</li>
+				<li class="next"><a href="http://sass-lang.com/" target="_blank">Sass:</a> // CSS препроцессор</li>
+				<li class="next"><a href="http://foundation.zurb.com/emails/inliner-v2.html" target="_blank">Inliner:</a> // Добавляет стили как inline</li>
+				<li class="next"><a href="https://www.browsersync.io/" target="_blank">BrowserSync:</a> // Виртуальный сервер + синхронизация браузеров</li> <!-- показать пример скроллинга -->
+				<li class="next"><a href="https://github.com/sindresorhus/gulp-imagemin" target="_blank">Image Compression:</a> // Оптимизация изображений</li>
+				<li class="next"><a href="https://litmus.com/" target="_blank">Litmus:</a> // Тестирование</li>
+			</ul>
+		</figure>
+		<style>
+			.complect li {
+				color: gray;
+			}
+			.complect li a {
+				color: #000;
+				display: inline-block;
+				width: 300px;
+				margin-left: 60px;
+			}
+		</style>
+	</section>
+
+	<section class="slide">
+		<h2>Файловая структура</h2>
+		<pre>
+			<code>assets/* <span class="comment">Sass and image файлы.</span></code>
+			<code>layouts/* <span class="comment">Обертка тела вашего письма.</span></code>
+			<code>pages/* <span class="comment">HTML страницы писем.</span></code>
+			<code>partials/* <span class="comment">Реиспользуемые компоненты ваших писем.</span></code>
+			<code>data/* <span class="comment">Данные письма (тексты, переводы).</span></code>
+		</pre>
+	</section>
+
+	<section class="slide components">
+		<h2>Компоненты Zurb</h2>
+		<p class="double" style="font-size: 30px;">
+			<a href="http://foundation.zurb.com/emails/docs/alignment.html" target="_blank">Alignment Classes</a><br>
+			<a href="http://foundation.zurb.com/emails/docs/button.html" target="_blank">Button</a><br>
+			<a href="http://foundation.zurb.com/emails/docs/callout.html" target="_blank">Callout</a><br>
+			<a href="http://foundation.zurb.com/emails/docs/global.html" target="_blank">Global Styles</a><br>
+			<a href="http://foundation.zurb.com/emails/docs/grid.html" target="_blank">Grid</a><br>
+			<a href="http://foundation.zurb.com/emails/docs/menu.html" target="_blank">Menu</a><br>
+			<a href="http://foundation.zurb.com/emails/docs/spacer.html" target="_blank">Spacer</a><br>
+			<a href="http://foundation.zurb.com/emails/docs/wrapper.html" target="_blank">Wrapper</a><br>
+			<a href="http://foundation.zurb.com/emails/docs/typography.html" target="_blank">Typography</a><br>
+			<a href="http://foundation.zurb.com/emails/docs/visibility.html" target="_blank">Visibility Classes</a>
+		</p>
+		<style>
+			.components ul {
+				font-size: 20px;
+			}
+		</style>
+	</section>
+
+	<section class="slide">
+		<h2>Разметка Grid</h2>
+		<pre>
+			<code>&lt;container&gt;</code>
+			<code>  &lt;row&gt;</code>
+			<code>    &lt;columns <span class="attr">small</span>=<span class="prop">"12"</span> <span class="attr">large</span>=<span class="prop">"6"</span>&gt;Column One&lt;/columns&gt;</code>
+			<code>    &lt;columns <span class="attr">small</span>=<span class="prop">"12"</span> <span class="attr">large</span>=<span class="prop">"6"</span>&gt;Column Two&lt;/columns&gt;</code>
+			<code>  &lt;/row&gt;</code>
+			<code>&lt;/container&gt;</code>
+		</pre>
+	</section>
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 	<section class="slide">
 		<h2>Two columns if you like</h2>
