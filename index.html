@@ -19,6 +19,14 @@
 		code {
 			color: #008080;
 		}
+		h2 small {
+			font-size: 90% !important;
+			opacity: .7;
+		}
+		.row {
+			display: grid;
+	    grid-template-columns: 1fr 1fr;
+		}
 	</style>
 </head>
 <body class="shower list">
@@ -30,11 +38,11 @@
 
 	<section class="slide">
 		<h2>Современный фронтенд</h2>
-		<ol>
-			<li>Создавать SPA</li>
-			<li>Создавать "нативные" приложения</li>
-			<li>2D/3D графика прямо в браузере</li>
-			<li>Да и просто создавать крутые web страницы!</li>
+		<ol style="font-size: 34px;margin-top: 70px;">
+			<li class="next">Создавать SPA</li>
+			<li class="next">Создавать "нативные" приложения</li>
+			<li class="next">2D/3D графика прямо в браузере</li>
+			<li class="next">Да и просто создавать крутые web страницы!</li>
 		</ol>
 	</section>
 
@@ -42,46 +50,44 @@
 		<h2 class="shout shrink" style="font-size: 70px;">Но есть есть одна проблема</h2>
 	</section>
 
+	<section class="slide" style="background-color: #867164;">
+		<figure>
+			<h2 class="shout shrink" style="font-size: 110px; color: white" >Верстка писем</h2>
+			<img class="cover" src="pictures/cat.jpg" alt="">
+		</figure>
+	</section>
+
 	<section class="slide">
 		<h2>Правила вёрстки email-писем</h2>
-		<ul>
-			<li>Используйте таблицы при верстке для контроля представления и дизайна.</li> <!-- Grid layout, flexbox, нет сынок, это письма -->
-			<li>Используйте вложенный в HTML-тэги CSS код</li> <!-- Забудьте про препроцессоры -->
-			<li>Изображения только на CDN или других удаленных ресурсах</li>
-			<li>Знание особенностей каждого почтового клиента</li> <!-- Тысячи их -->
-			<li>Мобильные девайсы</li> <!-- Статистика за 2017 год показывает что половина писем читаются с мобильных девайсов-->
+		<ul style="font-size: 22spx;margin-top: 70px;">
+			<li class="next">Используйте таблицы при верстке для контроля представления и дизайна.</li> <!-- Grid layout, flexbox, нет сынок, это письма -->
+			<li class="next">Используйте вложенный в HTML-тэги CSS код</li> <!-- Забудьте про препроцессоры -->
+			<li class="next">Изображения только на CDN или других удаленных ресурсах</li>
+			<li class="next">Знание особенностей каждого почтового клиента</li> <!-- Тысячи их -->
+			<li class="next">Мобильные девайсы</li> <!-- Статистика за 2017 год показывает что половина писем читаются с мобильных девайсов-->
 		</ul>
 	</section>
 
 	<section class="slide">
-		<h2>Разработка (В идеальном мире)</h2>
-		<ul>
-			<li>Дизайн</li>
-			<li>Верстка</li>
-			<li>Тестирование</li>
-		</ul>
+		<h2>Разработка email письма<small> (в идеальном мире)</small></h2>
+		<center>
+			<img src="pictures/flow-1.jpg" style="width: 80%;" alt="">
+		</center>
 	</section>
 
 	<section class="slide">
 		<h2>... и в реальном</h2>
-		<ul>
-			<li>Дизайн</li>
-			<li>Верстка</li>
-			<li>Тестирование</li>
-		</ul>
-	</section>
-
-	<section class="slide">
-		<h2>Тестирование</h2>
-		<img src="" alt="">
+		<center>
+			<img src="pictures/flow-2.jpg" style="width: 80%;" alt="">
+		</center>
 	</section>
 
 	<section class="slide">
 		<h2>Что в итоге?</h2>
-		<ul>
-			<li>Нечитабельный код</li> <!-- Grid layout, flexbox, нет сынок, это письма-->
-			<li>Большое колличество ограничений</li>
-			<li>Отстуствие гибкости</li>
+		<ul style="font-size: 40px;margin-top: 70px;">
+			<li class="next">Нечитабельный код</li>
+			<li class="next">Большое колличество ограничений</li>
+			<li class="next">Отстуствие гибкости</li>
 		</ul>
 	</section>
 
@@ -94,32 +100,48 @@
 	</section>
 
 	<section class="slide">
-		<h2 class="shout shrink" style="font-size: 80px;">Готовые решения и фреймворки</h2>
-		<ul>
-			<li>
-				Блочный редактор
-				<ul>
+		<h2>Готовые решения и фреймворки</h2>
+		<div class="row">
+			<div class="next">
+				<p style="margin-top: 50px;font-size: 30px;">Блочный редактор</p>
+				<ul style="margin-top: 10px;font-size: 30px;">
 					<li><a href="http://kb.mailchimp.com/templates/layouts-and-themes/create-a-template-with-the-template-builder">Mailchimp</a></li>
 					<li><a href="https://www.campaignmonitor.com/">Campaign Monitor</a></li>
 					<li><a href="https://beefree.io/">Beefree</a></li>
 				</ul>
-			</li>
-			<li>
-				Фреймворки
-				<ul>
+			</div>
+			<div class="next">
+				<p style="margin-top: 50px;font-size: 30px;">Фреймворки</p>
+				<ul style="margin-top: 10px;font-size: 30px;">
 					<li><a href="http://emailframe.work/">Emailframe.work</a></li>
 					<li><a href="https://mjml.io/">mjml.io</a></li>
 					<li><a href="http://foundation.zurb.com/emails/docs/sass-guide.html">Zurb Foundation</a></li>
 				</ul>
-			</li>
-		</ul>
+			</div>
+		</div>
 	</section>
 
-	<section class="slide">
+	<section class="slide zurb-preview">
 		<figure>
-			<h2>Zurb Foundation for Emails 2</h2>
+			<h2 style="color: #fff;font-size: 70px;margin-bottom: 70px;">Zurb Foundation<br> for Emails 2</h2>
+			<p style="color: #fff;font-size: 30px;line-height: 40px;">Создание адаптивных писем <br>которые работают везде</p>
 			<img class="cover" src="pictures/zurb-bg.png" alt="Orange typewriter on a wooden table close-up">
+			<img src="pictures/zurb-logo2.png" class="logo" alt="">
 		</figure>
+		<style>
+			.zurb-preview .logo {
+				position: absolute;
+				top: 18%;
+				right: 10%;
+				animation: moveLogo 5s infinite linear;
+
+			}
+			@keyframes moveLogo {
+			  0%   { transform: translateY(-15px); }
+			  50% { transform: translateY(15px); }
+			  100% { transform: translateY(-15px); }
+			}
+		</style>
 	</section>
 
 	<section class="slide">
@@ -160,7 +182,7 @@
 				<li class="next"><a href="https://github.com/zurb/panini" target="_blank">Panini:</a> // Генератор файлов</li>
 				<li class="next"><a href="http://sass-lang.com/" target="_blank">Sass:</a> // CSS препроцессор</li>
 				<li class="next"><a href="http://foundation.zurb.com/emails/inliner-v2.html" target="_blank">Inliner:</a> // Добавляет стили как inline</li>
-				<li class="next"><a href="https://www.browsersync.io/" target="_blank">BrowserSync:</a> // Виртуальный сервер + синхронизация браузеров</li> <!-- показать пример скроллинга -->
+				<li class="next"><a href="https://www.browsersync.io/" target="_blank">BrowserSync:</a> // Cинхронизация браузеров</li> <!-- показать пример скроллинга -->
 				<li class="next"><a href="https://github.com/sindresorhus/gulp-imagemin" target="_blank">Image Compression:</a> // Оптимизация изображений</li>
 				<li class="next"><a href="https://litmus.com/" target="_blank">Litmus:</a> // Тестирование</li>
 			</ul>
@@ -168,9 +190,10 @@
 		<style>
 			.complect li {
 				color: gray;
+				font-size: 24px;
 			}
 			.complect li a {
-				color: #000;
+				background: none;
 				display: inline-block;
 				width: 300px;
 				margin-left: 60px;
@@ -180,11 +203,11 @@
 
 	<section class="slide">
 		<h2>Файловая структура</h2>
-		<pre>
-			<code>assets/* <span class="comment">Sass and image файлы.</span></code>
+		<pre style="font-size: 30px;">
+			<code>assets/* <span class="comment">Файлы стилей и картинки.</span></code>
 			<code>layouts/* <span class="comment">Обертка тела вашего письма.</span></code>
 			<code>pages/* <span class="comment">HTML страницы писем.</span></code>
-			<code>partials/* <span class="comment">Реиспользуемые компоненты ваших писем.</span></code>
+			<code>partials/* <span class="comment">Реиспользуемые компоненты</span></code>
 			<code>data/* <span class="comment">Данные письма (тексты, переводы).</span></code>
 		</pre>
 	</section>
