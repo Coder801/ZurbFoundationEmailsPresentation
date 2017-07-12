@@ -59,11 +59,11 @@
 
 	<section class="slide">
 		<h2>Правила вёрстки email-писем</h2>
-		<ul style="font-size: 22spx;margin-top: 70px;">
+		<ul style="font-size: 22px;margin-top: 70px;">
 			<li class="next">Используйте таблицы при верстке для контроля представления и дизайна.</li> <!-- Grid layout, flexbox, нет сынок, это письма -->
 			<li class="next">Используйте вложенный в HTML-тэги CSS код</li> <!-- Забудьте про препроцессоры -->
 			<li class="next">Изображения только на CDN или других удаленных ресурсах</li>
-			<li class="next">Знание особенностей каждого почтового клиента</li> <!-- Тысячи их -->
+			<li class="next">Знание особенностей каждого почтового клиента (Тысячи их)</li> <!-- Тысячи их -->
 			<li class="next">Мобильные девайсы</li> <!-- Статистика за 2017 год показывает что половина писем читаются с мобильных девайсов-->
 		</ul>
 	</section>
@@ -88,6 +88,7 @@
 			<li class="next">Нечитабельный код</li>
 			<li class="next">Большое колличество ограничений</li>
 			<li class="next">Отстуствие гибкости</li>
+			<li class="next">Невозможность тестировать</li>
 		</ul>
 	</section>
 
@@ -148,11 +149,11 @@
 		<figure>
 			<h2>Преймущества использования Zurb</h2>
 			<ul>
-				<li>Возможность отойти от табличной вертски</li>
-				<li>Использование CSS препроцессоров</li>
-				<li>Гибкость в разработке</li>
-				<li>Встроенные инструменты для тестирования</li>
-				<li>Экономия времени и нервов</li>
+				<li class="next">Возможность отойти от табличной вертски</li>
+				<li class="next">Использование CSS препроцессоров</li>
+				<li class="next">Гибкость в разработке</li>
+				<li class="next">Встроенные инструменты для тестирования</li>
+				<li class="next">Экономия времени и нервов</li>
 			</ul>
 		</figure>
 	</section>
@@ -245,152 +246,134 @@
 		</pre>
 	</section>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-	<section class="slide">
-		<h2>Two columns if you like</h2>
-		<p class="double">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia.</p>
+	<section class="slide panini">
+		<h2>Библиотека Panini</h2>
+		<p class="next">Простой генератор файлов для Gulp. Он компилирует HTML-страницы, используя общий макет. Эти страницы также могут включать части HTML, хелперы, такие как Handlebars или внешние данные в формате JSON или YAML.</p>
+		<p class="next">Панини не является полноценным шаблонизатором. Он решает очень специфическую задачу сборки HTML файлов из общих элементов, используя язык шаблонов.</p>
+		<style>
+			.panini p {
+				font-size: 90%;
+			}
+		</style>
 	</section>
 
-	<section class="slide">
-		<h2>All kind of lists</h2>
-		<ol>
-			<li>Simple lists are marked with bullets</li>
-			<li>Ordered lists begin with a number</li>
-			<li>You can even nest lists one inside another
-				<ul>
-					<li>Or mix their types</li>
-					<li>But do not go too far</li>
-					<li>Otherwise audience will be bored</li>
-				</ul>
-			</li>
-			<li>Look, seven rows exactly!</li>
-		</ol>
-	</section>
-
-	<section class="slide">
-		<h2>Serious citations</h2>
-		<figure>
-			<blockquote>
-				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia.</p>
-			</blockquote>
-			<figcaption>Marcus Tullius Cicero</figcaption>
-		</figure>
-	</section>
-
-	<section class="slide">
-		<h2>Code samples</h2>
+	<section class="slide panini2">
+		<h2>Настраиваем в Gulp</h2>
 		<pre>
-			<code>&lt;!DOCTYPE html&gt;</code>
-			<code class="mark">&lt;html lang="en"&gt;</code>
-			<code><mark>&lt;head&gt;</mark> <span class="comment">&lt;!--Comment--&gt;</span></code>
-			<code>    &lt;title&gt;Shower&lt;/title&gt;</code>
-			<code>    &lt;meta charset="<mark class="important">UTF-8</mark>"&gt;</code>
-			<code>    &lt;link rel="stylesheet" href="screen.css"&gt;</code>
-			<code><mark>&lt;/head&gt;</mark></code>
+			<code><span class="attr">.pipe(panini({</span></code>
+			<code>	root: <span class="prop">`./src/pages`</span>,</code>
+			<code>	layouts: <span class="prop">`./src/layouts`</span>,</code>
+			<code>	data: <span class="prop">`./src/data`</span>,</code>
+			<code>	partials: <span class="prop">`./src/partials`</span>,</code>
+			<code>	helpers: <span class="prop">`./src/helpers`</span></code>
+			<code><span class="attr">}))</span></code>
 		</pre>
 	</section>
 
-	<section class="slide">
-		<h2>Even tables</h2>
-		<table>
-		<tr>
-			<th scope="col">Locavore</th>
-			<th>Umami</th>
-			<th>Helvetica</th>
-			<th>Vegan</th>
-		</tr>
-		<tr>
-			<th scope="row">Fingerstache</th>
-			<td>Kale</td>
-			<td>Chips</td>
-			<td>Keytar</td>
-		</tr>
-		<tr>
-			<th scope="row">Sriracha</th>
-			<td>Gluten-free</td>
-			<td>Ennui</td>
-			<td>Keffiyeh</td>
-		</tr>
-		<tr>
-			<th scope="row">Thundercats</th>
-			<td>Jean</td>
-			<td>Shorts</td>
-			<td>Biodiesel</td>
-		</tr>
-		<tr>
-			<th scope="row">Terry</th>
-			<td>Richardson</td>
-			<td>Swag</td>
-			<td>Blog</td>
-		</tr>
-		</table>
-		<p>It’s good to have information organized.</p>
-	</section>
-
-	<section class="slide" id="picture">
-		<h2>Pictures</h2>
-		<figure>
-			<img class="cover" src="pictures/picture.jpg" alt="Orange typewriter on a wooden table close-up">
-			<figcaption class="white">
-				<a href="http://fiftyfootshadows.net/">© John Carey</a>
-			</figcaption>
-		</figure>
+	<section class="slide panini3">
+		<h2>Используем</h2>
+		<pre>
+			<code><span class="comment">---</span></code>
+			<code><span class="comment">subject: Make text in your browser larger with ZoomSupport</span></code>
+			<code><span class="comment">description: Make text in your browser larger with ZoomSupport</span></code>
+			<code><span class="comment">---</span></code>
+			<code>  {{> <span class="attr">pre-header</span> }} <span class="comment">// Подключаем блок из папки pages</span></code>
+			<code>  {{> <span class="attr">sub-header</span> }}</code>
+			<code>  {{> <span class="attr">content</span> key=<span class="prop">value</span>}} <span class="comment">// Можем передать переменны в блок</span></code>
+			<code>  {{> <span class="attr">footer</span> }}</code>
+		</pre>
 		<style>
-			#picture h2 {
-				color:#FFF;
-				}
+		.panini3 pre {
+			font-size: 20px;
+		}
 		</style>
 	</section>
 
 	<section class="slide">
-		<h2 class="shout shrink">You can even shout this way</h2>
-	</section>
-
-	<section class="slide">
-		<h2>Inner navigation</h2>
-		<ol>
-			<li>Lets you reveal list items one by one</li>
-			<li class="next">To keep some key points</li>
-			<li class="next">In secret from audience</li>
-			<li class="next">But it will work only once</li>
-			<li class="next">Nobody wants to see the same joke twice</li>
+		<h2>Тестирование</h2>
+		<ol style="font-size: 30px;">
+			<li class="next">Возможность отправки письма непосредственно через SMTP</li>
+			<li class="next">Отправка на тестовые серсисы (emailonacid)</li>
+			<li class="next">Интеграция с Litmus</li>
 		</ol>
 	</section>
 
-	<section class="slide grid">
-		<h2>All nicely aligned to grid</h2>
+	<section class="slide">
+		<h2>Тестирование через SMTP</h2>
+		<div class="row next">
+			<pre style="font-size: 16px;">
+				<code>"mail": {</code>
+			  <code>  "to": <span class="attr">["youtestemail@email.com"]</span>,</code>
+			  <code>  "from": <span class="attr">"Company name info@company.com"</span>,</code>
+			  <code>  "smtp": {</code>
+			  <code>    "auth": {</code>
+			  <code>      "user": <span class="attr">"youtestemail@email.com"</span>,</code>
+			  <code>      "pass": <span class="attr">"**********"</span></code>
+			  <code>    },</code>
+			  <code>    "host": <span class="attr">"smtp.gmail.com",</span></code>
+			  <code>    "secureConnection": <span class="attr">true,</span></code>
+			  <code>    "port": <span class="attr">465</span></code>
+			  <code>  }</code>
+			  <code>}</code>
+			</pre>
+			<p style="text-align: center; font-size: 30px;margin-top: 100px;">Файл config.json</p>
+		</div>
 	</section>
 
-	<section class="slide" id="see-more">
-		<h2 class="shout">
-			<img src="pictures/logo.svg" alt="Shower logo">
-			<a href="https://github.com/shower/shower">See more on GitHub</a>
-		</h2>
-		<style>
-			#see-more h2 {
-				font-size:100px
-				}
-			#see-more img {
-				width:0.72em;
-				height:0.72em;
-				}
-		</style>
+	<section class="slide">
+		<h2>Тестирование через Litmus</h2>
+		<div class="row next">
+			<pre style="font-size: 16px;">
+				<code>"litmus": {</code>
+			  <code>  "username": <span class="attr">"YOUR_LITMUS@EMAIL.com",</span></code>
+			  <code>  "password": <span class="attr">"YOUR_ACCOUNT_PASSWORD",</span></code>
+			  <code>  "url": <span class="attr">"https://YOUR_ACCOUNT.litmus.com",</span></code>
+			  <code>  "applications": <span class="prop">["ol2003",
+					"ol2007", "ol2010",
+					"ol2011", "ol2013",
+					"chromegmailnew", "chromeyahoo",
+					"appmail9", "iphone5s",
+					"ipad", "android4",
+					"androidgmailapp"]</span></code>
+			  <code>},</code>
+			</pre>
+			<p style="text-align: center; font-size: 30px;margin-top: 100px;">Файл config.json</p>
+		</div>
 	</section>
+
+	<section class="slide">
+		<h2>Интеграция с AWS</h2>
+		<div class="row next">
+			<pre style="font-size: 16px;">
+				<code>"aws": {</code>
+			  <code>  "region": <span class="attr">"us-east-1"</span>,</code>
+			  <code>  "accessKeyId": <span class="attr">"YOUR_ACCOUNT_KEY"</span>,</code>
+			  <code>  "secretAccessKey": <span class="attr">"YOUR_ACCOUNT_SECRET"</span>,</code>
+			  <code>  "params": {</code>
+			  <code>      "Bucket": <span class="attr">"THIS_IS_JUST_AN_EXAMPLE"</span></code>
+			  <code>  },</code>
+			  <code>  "url": <span class="attr">"https://s3.amazonaws.com/THIS_IS_JUST_AN_EXAMPLE"</span></code>
+			  <code>},</code>
+			</pre>
+			<p style="text-align: center; font-size: 30px;margin-top: 100px;">Файл config.json</p>
+		</div>
+	</section>
+
+	<section class="slide">
+		<h2>Ограничения по дизайну</h2>
+		<ol style="font-size: 40px;margin-top: 90px;">
+			<li>Использовать сетку</li>
+			<li>... и все.</li>
+		</ol>
+	</section>
+
+	<section class="slide">
+		<h2 class="shout shrink" style="font-size: 80px;">Кастомизация</h2>
+	</section>
+
 
 	<footer class="badge">
-		<a href="https://github.com/shower/shower">Fork me on GitHub</a>
+		<a href="https://github.com/Coder801/ZurbFoundationEmailsPresentation.git">Fork me on GitHub</a>
 	</footer>
 
 	<div class="progress"></div>
